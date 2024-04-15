@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shop mô hình | Đăng nhập</title>
+    <!-- Icon của trang -->
+    <link rel="icon" href="/img/logo.png" type="image/png">
+    <!-- Sử dụng Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+</head>
+
+<body style="background-image: url('/img/Mobile-Suit-GundamSEED-Destiny-Super-Robot-Taisen-Gundam-Legend-Gundam-2167835.jpg');
+     background-size: cover; ">
+    <!-- Container chứa toàn bộ nội dung trang -->
+    <div class="container d-flex align-items-center justify-content-center vh-100 text-white">
+        <!-- Container chứa form đăng nhập -->
+        <div class="login-container"
+            style="max-width: 400px; width: 100%; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(17, 12, 12, 0.1);backdrop-filter: blur(5px);">
+            <!-- Tiêu đề của form -->
+            <h3 class="text-center mb-4">Đăng nhập</h3>
+
+            <!-- Form đăng nhập -->
+            <form method="post"
+                  th:action="@{/authentication}"
+                  class="form-horizontal"
+                  role="form"
+            >
+                <!-- Ô nhập tên người dùng -->
+                <div class="mb-3">
+                    <label class="form-label">Tên đăng nhập</label>
+                    <input class="form-control"
+                           type="text"
+                           required placeholder="Nhập tên đăng nhập"
+                           name="username"
+                           autofocus>
+                </div>
+
+                <!-- Ô nhập mật khẩu -->
+                <div class="mb-3">
+                    <label class="form-label">Mật khẩu</label>
+                    <input class="form-control"
+                           type="password"
+                           placeholder="Nhập mật khẩu"
+                           name="password"
+                           required id="passwordInput">
+                </div>
+
+                <!-- Nút đăng nhập -->
+                <ul class="navbar-nav text-center">
+                    <!-- Đăng nhập -->
+                    <li class="nav-item">
+                        <button type="submit" class="btn btn-success rounded-1">Đăng nhập
+                        </button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

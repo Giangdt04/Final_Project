@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý | Shop Jung Nguyen</title>
+
+  <link rel="icon" href="/img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="/lib_html/bootstrap.css" />
+  <script src="/lib_html/bootstrap.js"></script>
+
+  <!--Thư viện dùng để lấy thời gian-->
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+  <nav class="navbar navbar-expand-sm bg-light shadow">
+    <div class="container-fluid">
+      <a href="/templates/admin/admin.html">
+        <img src="/img/logo-removebg-preview.png" style="max-height: 50px" />
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link disabled text-dark" href="#">Xin chào admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="page/Login.html">Đăng xuất</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="d-flex">
+    <div class="bg-light p-2" style="width: 210px; min-height: calc(100vh - 56px)">
+      <ul class="nav flex-column nav-pills">
+        <li class="nav-item card  mt-1 mb-1">
+          <a class="nav-link card-header  btn btn-info text-start text-dark  dropdown-toggle" data-bs-toggle="collapse"
+            href="#menu-danhmuc">Quản
+            lý loại
+            sản phẩm</a>
+          <div class="collapse " id="menu-danhmuc">
+            <ul class="list-unstyled mt-2">
+              <li><a class="nav-link btn btn-info text-start text-dark" href="/templates/admin/QuanLyLoaiSanPham.html">Danh sách</a></li>
+              <li><a class="nav-link btn btn-info text-start text-dark" href="#!danhmuc-create">Thêm </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item card mt-1 mb-1">
+          <a class="nav-link card-header btn btn-info text-start text-dark dropdown-toggle" data-bs-toggle="collapse"
+            href="#menu-sanphham">Quản
+            lý sản phẩm</a>
+          <div class="collapse" id="menu-sanphham">
+            <ul class="list-unstyled mt-2">
+              <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-danhsach">Danh sách</a></li>
+              <li><a class="nav-link btn btn-info text-start text-dark" href="#!sanpham-create">Thêm </a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="m-3 " style="width: calc(100% - 250px)">
+      <!--Nội dung -->
+    </div>
+  </div>
+</body>
+
+</html>
